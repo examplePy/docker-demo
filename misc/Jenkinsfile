@@ -12,10 +12,13 @@ node {
      }
    }
    stage('docker build/push') {
-
+<<<<<<< HEAD
+     docker.withRegistry4e349a7%26nonce%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI0M2YxN2M1Zi05YmE0LTRmMTMtODUzZC05ZDAwNzRlMzQ5YTciLCJleHAiOiIyMDIyLTAzLTI5VDA5OjAyOjA1LjMyODQ1ODI3NFoiLCJpYXQiOiIyMDIyLTAzLTI5VDA4OjU3OjA1LjMyODQ1OTI4MVoiLCJyZnAiOiJrdVVpRGw0TktuMTRTeXNmUG1UekZnPT0iLCJ0YXJnZXRfbGlua191cmkiOiJodHRwczovL2h1Yi5kb2NrZXIuY29tIn0.vCZ2ZxoMQ6Z9jSkSRuN-ArDlytLQJ7ADI01opcKQ5DI%26redirect_uri%3Dhttps%253A%252F%252Fhub.docker.com%252Fsso%252Fcallback%26response_type%3Dcode%26scope%3Dopenid%26state%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI0M2YxN2M1Zi05YmE0LTRmMTMtODUzZC05ZDAwNzRlMzQ5YTciLCJleHAiOiIyMDIyLTAzLTI5VDA5OjAyOjA1LjMyODQ1ODI3NFoiLCJpYXQiOiIyMDIyLTAzLTI5VDA4OjU3OjA1LjMyODQ1OTI4MVoiLCJyZnAiOiJrdVVpRGw0TktuMTRTeXNmUG1UekZnPT0iLCJ0YXJnZXRfbGlua191cmkiOiJodHRwczovL2h1Yi5kb2NrZXIuY29tIn0.vCZ2ZxoMQ6Z9jSkSRuN-ArDlytLQJ7ADI01opcKQ5DI', 'd10d73e5-8838-49bd-b4cc-7715824b397e') {
+       def app = docker.build("https://github.com/examplePy/docker-demo:${commit_id}", '.').push()
+=======
      docker.withRegistry('https://index.docker.io/v2/', 'dockerhub') {
        def app = docker.build("wardviaene/docker-nodejs-demo:${commit_id}", '.').push()
-
+>>>>>>> parent of b77f9a0... Update Jenkinsfile
      }
    }
 }
